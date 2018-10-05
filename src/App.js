@@ -9,6 +9,7 @@ import Slider from './components/slider/Slider';
 import Catalogo from './components/catalogo/Catalogo';
 import Classic from './components/classic/Classic';
 import MenuLateral from './components/menu-lateral/MenuLateral';
+import Ibook from './components/ibook/Ibook';
 
 class App extends Component {
 
@@ -105,6 +106,16 @@ class App extends Component {
                   </section>
                 </div>
             )}/>
+          <Route exact path='/ibook' render={(props) => (
+            <div>
+              <MenuLateral />
+                <section class="content">
+                  <div className="content-home">
+                    <Ibook />
+                  </div>
+                </section>
+            </div>
+          )}/>
           </Switch>
       </div>
     );
