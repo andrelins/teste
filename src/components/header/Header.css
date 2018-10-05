@@ -1,0 +1,70 @@
+.App-header {
+  background: linear-gradient(-90deg, #7c0037, #e8002d);
+  height: 45px;
+  padding: 18px;
+  color: white;
+  position: relative;
+}
+
+.header-nav {
+  list-style: none;
+  padding: 0px;
+}
+
+.header-nav li {
+  font-family: newJuneMedium;
+  font-size: 10pt;
+  color: rgba(255,255,255,0.5);
+  float: left;
+  line-height: 20px;
+  margin-right: 30px;
+}
+
+.cube-nav {
+  display: none;
+  background: #008fc2;
+  width: 8px;
+  height: 8px;
+  float: left;
+  margin: 5px 13px 0 0;
+}
+
+.cube-active {
+  display: block;
+}
+
+.nav-active {
+  color: #fff !important;
+  font-size: 11pt !important;
+}
+
+.box-alerta-header {
+  position: absolute;
+  right: 8px;
+  top: 29px;
+  border-left: 1px solid rgba(255,255,255,0.2);
+  height: 27px;
+  padding-left: 16px;
+}
+
+.alerta-header {
+  width: 55px;
+  margin: -14px 12px 0 0;
+  cursor: pointer;
+}
+
+.count-alerts {
+  background: linear-gradient(-90deg, #0070ab, #29b0d7);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border-radius: 20px;
+  position: absolute;
+  right: 16px;
+  top: -4px;
+}
+
+.count-alerts span {
+  font-size: 8pt;
+  margin: auto;
+}

@@ -1,0 +1,161 @@
+.box-catalogo {
+  position: absolute;
+  top: 90px;
+  right: 0px;
+  width: 455px;
+}
+
+.block-catalogo {
+  width: 40px;
+  height:10px;
+  background: #19a9d2;
+  margin-left: 8px;
+}
+
+.block-catalogo.classc {
+  background: #19a9d2;
+}
+
+.block-catalogo.exclusive {
+  background: #9a7049;
+}
+
+.block-catalogo.prime {
+  background: #5f6065;
+}
+
+.title-catalogo {
+  color: #fff;
+  font-family: 'newJuneBold';
+  font-weight: bolder;
+  font-size: 54pt;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.box-subtitulo, .box-descricao-catalogo {
+  border-bottom: 1px solid rgba(255,255,255,0.13);
+  width: 90%;
+  margin-left: 10px;
+  height: 60px;
+  display: flex;
+}
+
+.catalogo-subtitulo {
+  font-style: newJuneBold;
+  font-size: 11pt;
+  color: #d30035;
+  margin: 24px 0px 0px 0px;
+  display: block;
+  flex: 1;
+  margin: auto;
+}
+
+.catalogo-subtitulo.classc {
+  color: #d30035;
+}
+
+.catalogo-subtitulo.exclusive {
+  color: #9a7049;
+}
+
+.catalogo-subtitulo.prime {
+  color: #5f6065;
+}
+
+.box-count-ibooks {
+  flex: 1;
+  margin: auto;
+  text-align: right;
+}
+
+.count-text {
+  font-style: newJuneMedium;
+  font-size: 9pt;
+  color: #fff;
+}
+
+.count-text span {
+  font-style: newJuneBold;
+  font-size: 8pt;
+  color: rgba(255,255,255,0.3);
+}
+
+.box-descricao-catalogo{
+  height: 70px;
+}
+
+.box-descricao-catalogo p {
+  font-style: newJuneRegular;
+  font-size: 10pt;
+  color: rgba(255,255,255,0.5);
+  flex: 1;
+  margin: auto;
+}
+
+.box-sugeridos {
+  width: 100%;
+  margin-left: 10px;
+  height: 80px;
+  display: flex;
+  cursor: pointer;
+}
+
+.block-sugeridos {
+  background: rgba(255,255,255,0.2);
+  max-width: 8px;
+  height: 8px;
+  flex: 1;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.box-sugeridos.active .block-sugeridos {
+  background: #df0037;
+}
+
+.box-sugeridos.active .block-sugeridos.classic {
+  background: #d30035;
+}
+
+.box-sugeridos.active .block-sugeridos.exclusive {
+  background: #9a7049;
+}
+
+.box-sugeridos.active .block-sugeridos.prime {
+  background: #808080;
+}
+
+.box-sugeridos p {
+  font-size: 12pt;
+  font-family: newJuneRegular;
+  color: rgba(255,255,255,0.2);
+  flex: 2;
+  margin: auto;
+  margin-left: 60px;
+}
+
+.box-sugeridos.active p {
+  color: #fff;
+}
+
+.seta-direita {
+  width: 20px;
+  height: 20px;
+  color: rgba(255,255,255,0.2);
+  flex: 1;
+  margin: auto;
+  text-align: right;
+}
+
+.box-sugeridos.active .seta-direita.classic {
+  color: #df0037;
+}
+
+.box-sugeridos.active .seta-direita.exclusive {
+  color: #9a7049;
+}
+
+.box-sugeridos.active .seta-direita.prime {
+  color: #808080;
+}

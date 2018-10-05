@@ -1,0 +1,125 @@
+.box-cards-vitrine {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.box-card-vitrine {
+  width: 100%;
+  max-width: 170px;
+  max-height: 198px;
+  position: relative;
+  float: left;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+.box-card-vitrine:hover {
+  transform: scale(1.1);
+  z-index: 999;
+  box-shadow: 0px 0px 12px 2px #000;
+  transition: all 0.7s;
+}
+
+.box-card-vitrine img {
+  width: 100%;
+}
+
+.mask-active {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-120deg, rgba(0, 45, 71, 0.6), rgba(0, 45, 71, 0.7), rgba(0, 45, 71, 0.8), rgba(0, 45, 71, 0.8), rgba(0, 45, 71, 0.9), rgba(0,0,0,0.9), #000);
+  /* background: linear-gradient(-120deg, rgb(42, 177, 215), rgb(0, 108, 170), rgb(0, 52, 82), rgb(6, 6, 6), rgb(6, 6, 6)); */
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.mask-active:hover {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.block-mask-card {
+  width: 17px;
+  height:5px;
+  background: #da002e;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.title-mask-card {
+  position: absolute;
+  top: 44px;
+  left: 20px;
+  color: #fff;
+  font-size: 16pt;
+  font-family: 'newJuneMedium';
+  margin: 0px;
+}
+
+.subtitle-mask-card {
+  position: absolute;
+  top: 72px;
+  left: 20px;
+  color: #c30032;
+  font-size: 9pt;
+  font-family: 'newJuneRegular';
+  margin: 0px;
+}
+
+.description-mask-card {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  color: rgba(255,255,255,0.5);
+  font-size: 7pt;
+  font-family: 'newJuneRegular';
+  margin: 0px;
+}
+
+.count-pages-mask-cards {
+  position: absolute;
+  top: 140px;
+  left: 40px;
+  font-style: newJuneMedium;
+  font-size: 7pt;
+  color: #fff;
+  line-height: 30px;
+}
+
+.count-pages-mask-cards span {
+  color: rgba(255,255,255,0.3);
+}
+
+.icon-file-mask-cards {
+  width: 60px !important;
+  position: absolute;
+  bottom: -15px;
+  left: -5px;
+}
+
+.size-file-mask-cards {
+  position: absolute;
+  bottom: 0px;
+  right: 40px;
+  font-style: 'newJuneMedium';
+  font-size: 7pt;
+  color: #fff;
+  line-height: 30px;
+  margin: 0px;
+}
+
+.size-file-mask-cards span{
+  font-size: 6pt;
+  color: rgba(255,255,255,0.3);
+}
+
+.arrow-right-mask-cards {
+  color: #c30032;
+  font-size: 10pt;
+  position: absolute;
+  bottom: 9px;
+  right: -25px;
+}

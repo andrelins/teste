@@ -1,0 +1,60 @@
+@font-face {
+    font-family: newJuneRegular;
+    src: url("./assets/fonts/NewJune-Regular/NewJune-Regular.ttf");
+}
+
+@font-face {
+    font-family: newJuneBold;
+    src: url("./assets/fonts/NewJune-Bold/NewJune-Bold.ttf");
+}
+
+@font-face {
+    font-family: newJuneMedium;
+    src: url("./assets/fonts/NewJune-Medium/NewJune-Medium.ttf");
+}
+
+body {
+  background-image: url('./assets/images/bg1.png');
+  background-color:  #000;
+  background-position: top center;
+  transition: background-image 1s;
+}
+
+body.catalogo-classic {
+  background-image: url('./assets/images/bg1.png');
+  background-color:  #000;
+  background-position: top center;
+  transition: background-image 1s;
+}
+
+body.catalogo-exclusive {
+  background-image: url('./assets/images/bg3.png');
+  background-color:  #000;
+  background-position: top center;
+  transition: background-image 1s;
+}
+
+body.catalogo-prime {
+  background-image: url('./assets/images/bg2.png');
+  background-color:  #000;
+  background-position: top center;
+  transition: background-image 1s;
+}
+
+.App-logo {
+  width: 231px;
+  float: left;
+  margin-right: 80px;
+  margin-top: -4px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.content-home {
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}

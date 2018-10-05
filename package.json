@@ -1,0 +1,22 @@
+{
+  "name": "vendamais",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-atv-parallax": "^1.0.2",
+    "react-dom": "^16.5.2",
+    "react-icons": "^3.1.0",
+    "react-id-swiper": "^1.6.8",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "react-swipe-component": "^2.1.0",
+    "react-timeout": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
