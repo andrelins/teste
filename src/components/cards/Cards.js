@@ -19,23 +19,19 @@ class Cards extends Component {
   }
 
   render() {
+    const { data } = this.props;
     return (
       <div className="box-cards-vitrine">
         <div className="box-card-vitrine active">
-          <img src="assets/images/abs-senior-fullscreen.jpg" />
-          <div className="box-title-card">
-            <div className="block-card"></div>
-            <p className="title-card">VIDA</p>
-            <p className="subtitle-card">Proteção Familiar</p>
-          </div>
-        <div className="mask-active" >
+          <img src={data.image} />
+          <div className="mask-active" >
             <div className="block-mask-card"></div>
-            <p className="title-mask-card">VIDA</p>
-            <p className="subtitle-mask-card">Proteção Familiar</p>
-            <p className="description-mask-card">Lorem Ipsum é simplesmente uma simulação de texto da indústria simplesmente uma simulação de texto da indústria</p>
-            <p className="count-pages-mask-cards">50 <span>Páginas</span></p>
+            <p className="title-mask-card">{data.category}</p>
+            <p className="subtitle-mask-card">{data.title}</p>
+            <p className="description-mask-card">{data.description}</p>
+            <p className="count-pages-mask-cards">{data.page_count} <span>Páginas</span></p>
             <img className="icon-file-mask-cards" src={file_classic} />
-            <p className="size-file-mask-cards">20 <span>MB</span> <FaChevronRight className="arrow-right-mask-cards" /></p>
+            <p className="size-file-mask-cards">20 <span>{data.size_type}</span> <FaChevronRight className="arrow-right-mask-cards" /></p>
           </div>
         </div>
       </div>

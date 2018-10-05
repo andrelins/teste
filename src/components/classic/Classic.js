@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaRegListAlt } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import './Classic.css';
 
@@ -14,7 +14,21 @@ import lista_2 from '../../assets/icons/lista_2.svg';
 
 class Classic extends Component {
 
+  state = {
+    dataClassic: []
+  }
+
+  async componentDidMount() {
+    const response = await fetch(`https://ibooks.mybluemix.net/ebooks?token=dbe62952defb9bb128e0aeadfed3d247&category=Classic`)
+    const responseJson = await response.json();
+    console.log(responseJson);
+    this.setState({dataClassic: responseJson});
+  }
+
   render() {
+
+    const { dataClassic } = this.state;
+
     return (
       <div className="header-vitrine">
         <div className="block-header-vitrine"></div>
@@ -23,7 +37,7 @@ class Classic extends Component {
           <p className="item-drop-vitrine">Vitrine Bradesco Classic</p>
           <FaChevronDown className="arrow-down" />
           <img className="icon-file" src={file_classic} />
-          <p className="count-text">50 <span>Ibooks</span></p>
+          <p className="count-text"> <span>Ibooks</span></p>
         </div>
         <div className="box-title-vitrine">
           <h1 className="title">CLASSIC</h1>
@@ -33,25 +47,9 @@ class Classic extends Component {
             <img className="icon-cards" src={lista_2} />
           </div>
         </div>
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
-        <CardsLista />
+        {dataClassic.map((data) => (
+          <CardsLista data={data} />
+        ))}
       </div>
     );
   }
