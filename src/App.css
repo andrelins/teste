@@ -18,6 +18,7 @@ body {
   background-color:  #000;
   background-position: top center;
   transition: background-image 1s;
+  background-attachment: fixed;
 }
 
 body.catalogo-classic {
@@ -57,4 +58,13 @@ body.catalogo-prime {
   display: block;
   margin: 0 auto;
   position: relative;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+  .content-home {
+    max-width: 895px;
+    margin-left: 100px;
+  }
 }
