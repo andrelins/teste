@@ -5,12 +5,13 @@
 
 .box-card-vitrine {
   width: 100%;
-  max-width: 170px;
-  max-height: 198px;
+  max-width: 240px;
+  max-height: 278px;
   position: relative;
   float: left;
   transition: all 0.7s;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .box-card-vitrine:hover {
