@@ -23,7 +23,7 @@ class Classic extends Component {
   }
 
   async componentDidMount() {
-    const response = await fetch(`https://api-apps.mybluemix.net/ebooks?token=dbe62952defb9bb128e0aeadfed3d247`)
+    const response = await fetch(`https://ibooks.mybluemix.net/ebooks?token=dbe62952defb9bb128e0aeadfed3d247&category=Classic`)
     const responseJson = await response.json();
     console.log(responseJson);
     this.setState({dataClassic: responseJson});
