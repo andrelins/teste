@@ -5,6 +5,7 @@ import './Classic.css';
 
 //components
 import CardsLista from '../cards-lista/CardsLista';
+import Cards from '../cards/Cards';
 
 //icons
 import catalogo_classic from '../../assets/icons/catalogo_classic.svg';
@@ -48,7 +49,7 @@ class Classic extends Component {
           </div>
         </div>
         {dataClassic.map((data) => (
-          <CardsLista data={data} />
+          <Cards data={data} />
         ))}
       </div>
     );
