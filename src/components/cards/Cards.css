@@ -14,13 +14,6 @@
   overflow: hidden;
 }
 
-.box-card-vitrine:before {
-  background: -webkit-linear-gradient(-70deg, transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-  background: -o-linear-gradient(-70deg, transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-  background: -moz-linear-gradient(-70deg, transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-  background: linear-gradient(-70deg, transparent, rgba(0, 0, 0, 0), rgb(0, 0, 0));
-}
-
 .box-card-vitrine:hover {
   transform: scale(1.1);
   z-index: 999;
@@ -40,12 +33,12 @@
   position: absolute;
   top: 0px;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.8s;
 }
 
 .mask-active:hover {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.8s;
 }
 
 .block-mask-card {
@@ -59,7 +52,7 @@
 
 .title-mask-card {
   position: absolute;
-  top: 44px;
+  top: 48px;
   left: 20px;
   color: #fff;
   font-size: 16pt;
@@ -69,7 +62,7 @@
 
 .subtitle-mask-card {
   position: absolute;
-  top: 72px;
+  top: 80px;
   left: 20px;
   color: #c30032;
   font-size: 9pt;
@@ -79,22 +72,22 @@
 
 .description-mask-card {
   position: absolute;
-  top: 100px;
+  top: 120px;
   left: 20px;
   color: rgba(255,255,255,0.5);
-  font-size: 7pt;
+  font-size: 8pt;
   font-family: 'newJuneRegular';
   margin: 0px;
+  width: 80%;
 }
 
 .count-pages-mask-cards {
   position: absolute;
-  top: 140px;
-  left: 40px;
-  font-style: newJuneMedium;
+  bottom: 2px;
+  left: 55px;
+  font-style: 'newJuneMedium';
   font-size: 7pt;
   color: #fff;
-  line-height: 30px;
 }
 
 .count-pages-mask-cards span {
@@ -135,9 +128,9 @@
 .box-title-card .block-card {
   width: 17px;
   height:5px;
-  background: #da002e;
+  background: #19a9d2;
   position: absolute;
-  bottom: 75px;
+  bottom: 80px;
   left: 20px;
 }
 
@@ -159,4 +152,20 @@
   font-size: 9pt;
   font-family: 'newJuneRegular';
   margin: 0px;
+}
+
+.box-title-card {
+  width: 100%;
+  height: 100%;
+  max-height: 278px;
+  position: absolute;
+  top: 0px;
+  background: linear-gradient(-120deg, #000, #00000063, #000);
+  opacity: 1;
+  transition: all 0.8s
+}
+
+.box-card-vitrine:hover .box-title-card {
+  opacity: 0;
+  transition: all 0.8s;
 }

@@ -24,6 +24,7 @@ class Cards extends Component {
         <div className="box-card-vitrine active">
           <img src="assets/images/abs-senior-fullscreen.jpg" />
           <div className="box-title-card">
+            
             <div className="block-card"></div>
             <p className="title-card">VIDA</p>
             <p className="subtitle-card">Proteção Familiar</p>
