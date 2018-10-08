@@ -18,7 +18,7 @@ a {
 }
 
 body {
-  background-image: url('./assets/images/bg1.png');
+  background-image: url('/vendamais-ibooks/assets/images/bg1.png');
   background-color:  #000;
   background-position: top center;
   transition: background-image 1s;
@@ -26,21 +26,21 @@ body {
 }
 
 body.catalogo-classic {
-  background-image: url('./assets/images/bg1.png');
+  background-image: url('/vendamais-ibooks/assets/images/bg1.png');
   background-color:  #000;
   background-position: top center;
   transition: background-image 1s;
 }
 
 body.catalogo-exclusive {
-  background-image: url('./assets/images/bg3.png');
+  background-image: url('/vendamais-ibooks/assets/images/bg3.png');
   background-color:  #000;
   background-position: top center;
   transition: background-image 1s;
 }
 
 body.catalogo-prime {
-  background-image: url('./assets/images/bg2.png');
+  background-image: url('/vendamais-ibooks/assets/images/bg2.png');
   background-color:  #000;
   background-position: top center;
   transition: background-image 1s;

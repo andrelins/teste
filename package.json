@@ -11,13 +11,21 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
     "react-swipe-component": "^2.1.0",
-    "react-timeout": "^1.1.2"
+    "react-timeout": "^1.1.2",
+    "serve": "^10.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "npm run replace:all",
+    "replace:all": "npm run replace:font && npm run replace:static",
+    "replace:font": "replace '/fonts/' 'fonts/' ./build/index.html",
+    "replace:static": "replace '/static/' 'static/' ./build/index.html"
   },
-  "homepage": "/"
+  "homepage": "/",
+  "devDependencies": {
+    "replace": "^1.0.0"
+  }
 }

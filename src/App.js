@@ -23,23 +23,23 @@ class App extends Component {
   state = {
     slide: [
       {
-        image: 'assets/images/abs-senior-fullscreen.jpg ',
+        image: '/vendamais-ibooks/assets/images/abs-senior-fullscreen.jpg ',
         position: 0
       },
       {
-        image: 'assets/images/residencial-classic-fullscreen.jpg',
+        image: '/vendamais-ibooks/assets/images/residencial-classic-fullscreen.jpg',
         position: 1
       },
       {
-        image: 'assets/images/seguro-mais-bradesco-exclusive-protecao-familiar-fullscreen.jpg',
+        image: '/vendamais-ibooks/assets/images/seguro-mais-bradesco-exclusive-protecao-familiar-fullscreen.jpg',
         position: 2
       },
       {
-        image: 'assets/images/bradesco-dental-ideal-mercado-fullscreen.jpg',
+        image: '/vendamais-ibooks/assets/images/bradesco-dental-ideal-mercado-fullscreen.jpg',
         position: 3
       },
       {
-        image: 'assets/images/bradesco-multiprotecao-fullscreen.jpg',
+        image: '/vendamais-ibooks/assets/images/bradesco-multiprotecao-fullscreen.jpg',
         position: 4
       },
     ]
