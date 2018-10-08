@@ -15,8 +15,9 @@ import lista_2 from '../../assets/icons/lista_2.svg';
 
 class Classic extends Component {
 
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
+    console.log(props)
     this.state = {
       isList: false
     }

@@ -32,8 +32,9 @@ class Catalogo extends Component {
     console.log('reset');
   }
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    console.log(props);
   }
 
   componentDidMount() {

@@ -13,6 +13,10 @@
     src: url("./assets/fonts/NewJune-Medium/NewJune-Medium.ttf");
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-image: url('./assets/images/bg1.png');
   background-color:  #000;

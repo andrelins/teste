@@ -16,6 +16,10 @@ import * as API from './providers/Ibooks';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   state = {
     slide: [
       {
@@ -43,6 +47,7 @@ class App extends Component {
 
   componentDidMount() {
     //this.getIbooks();
+    console.log(this.props)
   }
 
   getIbooks = () => {
@@ -100,30 +105,35 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="App">
-        <Header />
           <Switch>
             <Route exact path='/' render={(props) => (
-              <section class="content">
-                <div className="content-home">
-                  <Slider slide={this.state.slide} pudateSlide={this.pudateSlide} />
-                  <Catalogo updateCategorySlides={ this.updateCategorySlides } />
-                </div>
-              </section>
+              <div>
+                <Header {...props} />
+                <section class="content">
+                  <div className="content-home">
+                    <Slider slide={this.state.slide} pudateSlide={this.pudateSlide} />
+                    <Catalogo {...props} updateCategorySlides={ this.updateCategorySlides } />
+                  </div>
+                </section>
+              </div>
             )}/>
             <Route exact path='/classic' render={(props) => (
                 <div>
+                  <Header {...props} />
                   <MenuLateral />
                   <section class="content">
                     <div className="content-home">
-                      <Classic />
+                      <Classic {...props} />
                     </div>
                   </section>
                 </div>
             )}/>
           <Route exact path='/exclusive' render={(props) => (
               <div>
+                <Header {...props} />
                 <MenuLateral />
                 <section class="content">
                   <div className="content-home">
@@ -134,6 +144,7 @@ class App extends Component {
           )}/>
           <Route exact path='/prime' render={(props) => (
               <div>
+                <Header {...props} />
                 <MenuLateral />
                 <section class="content">
                   <div className="content-home">
@@ -144,6 +155,7 @@ class App extends Component {
           )}/>
         <Route exact path='/pessoa-juridica' render={(props) => (
             <div>
+              <Header {...props} />
               <MenuLateral />
                 <section class="content content-ibook">
                   <div className="content-home">
@@ -154,6 +166,7 @@ class App extends Component {
           )}/>
         <Route exact path='/outros' render={(props) => (
             <div>
+              <Header {...props} />
               <MenuLateral />
                 <section class="content content-ibook">
                   <div className="content-home">
@@ -164,6 +177,7 @@ class App extends Component {
           )}/>
           <Route exact path='/ibook' render={(props) => (
             <div>
+              <Header {...props} />
               <MenuLateral />
                 <section class="content content-ibook">
                   <div className="content-home">
