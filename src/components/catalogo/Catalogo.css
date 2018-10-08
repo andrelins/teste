@@ -110,6 +110,12 @@
   margin-left: 10px;
 }
 
+.box-sugeridos a {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+}
+
 .box-sugeridos.active .block-sugeridos {
   background: #df0037;
 }

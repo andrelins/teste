@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Link } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom';
 import Swiper from 'react-id-swiper';
 import './App.css';
 
@@ -10,6 +10,9 @@ import Catalogo from './components/catalogo/Catalogo';
 import Classic from './components/classic/Classic';
 import MenuLateral from './components/menu-lateral/MenuLateral';
 import Ibook from './components/ibook/Ibook';
+
+//providers
+import * as API from './providers/Ibooks';
 
 class App extends Component {
 
@@ -38,8 +41,21 @@ class App extends Component {
     ]
   }
 
+  componentDidMount() {
+    //this.getIbooks();
+  }
+
+  getIbooks = () => {
+    API.getIbooks().then((data) => {
+      console.log(data);
+      this.setState({slide: data});
+    });
+  }
+
   updateCategorySlides = (category) => {
     const {slide} = this.state;
+
+    //let newSlide = slide.filter((data) => data.category.toLowerCase() == category)
 
     let newSlide = [
       {
@@ -106,10 +122,50 @@ class App extends Component {
                   </section>
                 </div>
             )}/>
+          <Route exact path='/exclusive' render={(props) => (
+              <div>
+                <MenuLateral />
+                <section class="content">
+                  <div className="content-home">
+                    <Classic />
+                  </div>
+                </section>
+              </div>
+          )}/>
+          <Route exact path='/prime' render={(props) => (
+              <div>
+                <MenuLateral />
+                <section class="content">
+                  <div className="content-home">
+                    <Classic />
+                  </div>
+                </section>
+              </div>
+          )}/>
+        <Route exact path='/pessoa-juridica' render={(props) => (
+            <div>
+              <MenuLateral />
+                <section class="content content-ibook">
+                  <div className="content-home">
+                    <Classic />
+                  </div>
+                </section>
+            </div>
+          )}/>
+        <Route exact path='/outros' render={(props) => (
+            <div>
+              <MenuLateral />
+                <section class="content content-ibook">
+                  <div className="content-home">
+                    <Classic />
+                  </div>
+                </section>
+            </div>
+          )}/>
           <Route exact path='/ibook' render={(props) => (
             <div>
               <MenuLateral />
-                <section class="content">
+                <section class="content content-ibook">
                   <div className="content-home">
                     <Ibook />
                   </div>

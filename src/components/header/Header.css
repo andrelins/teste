@@ -20,6 +20,11 @@
   margin-right: 30px;
 }
 
+.header-nav li a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+}
+
 .cube-nav {
   display: none;
   background: #008fc2;
@@ -33,7 +38,7 @@
   display: block;
 }
 
-.nav-active {
+.nav-active, .nav-active a {
   color: #fff !important;
   font-size: 11pt !important;
 }

@@ -1,0 +1,96 @@
+.cards-lista {
+    padding: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+  }
+  
+  .cards-lista:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .box-thumb-lista {
+    max-width: 130px;
+    max-height: 110px;
+    display: block;
+    overflow: hidden;
+    flex: 1;
+  }
+  
+  .box-thumb-lista img {
+    width: 100%;
+    min-height: 128px;
+  }
+  
+  .box-title-lista {
+    flex: 1;
+  }
+  
+  .block-lista-title {
+    width: 20px;
+    height: 5px;
+    background: #19a9d2;
+    margin-left: 30px;
+    margin-top: 9px;
+  }
+  
+  .box-title-lista p {
+    font-family: 'newJuneMedium';
+    font-size: 14pt;
+    color: #fff;
+    margin-left: 30px;
+    margin-bottom: 2px;
+  }
+  
+  .box-title-lista span {
+    color: #d30035;
+    font-size: 9pt;
+    margin-left: 30px;
+  }
+
+  .box-desc-lista p {
+    font-family: 'newJuneMedium';
+    font-size: 9pt;
+    color: #fff;
+    margin-bottom: 2px;
+    text-align: center;
+    max-width: 450px;
+  }
+  
+  .box-count-lista {
+    flex: 1;
+  }
+  
+  .box-count-lista .tempo-lista{
+    font-family: 'newJuneMedium';
+    font-size: 7pt;
+    color: #666;
+    text-align: right;
+    margin-right: 25px;
+  }
+  
+  .box-count-lista hr {
+    width: 100%;
+    max-width: 80px;
+    display: block;
+    position: absolute;
+    right: 34px;
+    border-color: #666666b0;
+  }
+  
+  .box-count-lista img {
+    width: 50px;
+    margin: 12px 0 0 0;
+    float: right;
+  }
+  
+  .box-count-lista .count-pages-lista {
+    color: #fff;
+    font-size: 7pt;
+    margin-top: 42px;
+    text-align: right;
+    margin-right: 25px;
+  }
+  
+  .box-count-lista .count-pages-lista span {
+    color: #666;
+  }  

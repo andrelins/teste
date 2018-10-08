@@ -4,6 +4,10 @@
   display: flex;
 }
 
+.content-news:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .box-thumb-news {
   max-width: 130px;
   max-height: 95px;

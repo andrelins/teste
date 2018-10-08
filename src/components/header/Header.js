@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../assets/icons/logo.svg';
 import alerta from '../../assets/icons/alerta.svg';
+import { Link } from "react-router-dom";
 import './Header.css';
 
 //components
@@ -28,10 +29,12 @@ class Header extends Component {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <ul className="header-nav">
-          <li className="nav-active"><div className="cube-nav cube-active"></div>Catalogo</li>
-          <li><div className="cube-nav"></div>Classic</li>
-          <li><div className="cube-nav"></div>Exclusive</li>
-          <li><div className="cube-nav"></div>Prime</li>
+          <li className="nav-active"><a href="/"><div className="cube-nav cube-active"></div>Catalogo</a></li>
+          <li><Link to="/classic"><div className="cube-nav"></div>Classic</Link></li>
+          <li><Link to="/exclusive"><div className="cube-nav"></div>Exclusive</Link></li>
+          <li><Link to="/prime"><div className="cube-nav"></div>Prime</Link></li>
+          <li><Link to="/pessoa-juridica"><div className="cube-nav"></div>Pessoa Jurídica</Link></li>
+          <li><Link to="/outros"><div className="cube-nav"></div>Outros</Link></li>
         </ul>
         <div className="box-alerta-header">
           <div className="count-alerts"><span>10</span></div>

@@ -13,6 +13,25 @@ import saude from '../../assets/icons/saude.svg';
 
 class MenuLateral extends Component {
 
+  changeMenu = (categoria) => {
+    document.querySelector(".border-catalogo").classList.remove('active');
+    document.querySelector(".catalogo").classList.remove('active');
+    document.querySelector(".border-dental").classList.remove('active');
+    document.querySelector(".dental").classList.remove('active');
+    document.querySelector(".border-residencial").classList.remove('active');
+    document.querySelector(".residencial").classList.remove('active');
+    document.querySelector(".border-saude").classList.remove('active');
+    document.querySelector(".saude").classList.remove('active');
+    document.querySelector(".border-auto").classList.remove('active');
+    document.querySelector(".auto").classList.remove('active');
+    document.querySelector(".border-vida").classList.remove('active');
+    document.querySelector(".vida").classList.remove('active');
+
+
+    document.querySelector(".border-"+categoria).classList.add('active');
+    document.querySelector("."+categoria).classList.add('active');
+  }
+
   render() {
     return (
       <div className="menu-lateral">
@@ -20,29 +39,29 @@ class MenuLateral extends Component {
           <img className="icon-busca" src={busca} />
         </div>
         <ul className="box-menu-lateral">
-          <li>
-            <div className="border-active active"></div>
-            <img className="icon-menu-lateral active" src={catalogo} />
+          <li onClick={() => this.changeMenu('catalogo')}>
+            <div className="border-active active border-catalogo"></div>
+            <img className="icon-menu-lateral active catalogo" src={catalogo} />
           </li>
-          <li>
-            <div className="border-active"></div>
-            <img className="icon-menu-lateral" src={dental} />
+          <li onClick={() => this.changeMenu('dental')}>
+            <div className="border-active border-dental"></div>
+            <img className="icon-menu-lateral dental" src={dental} />
           </li>
-          <li>
-            <div className="border-active"></div>
-            <img className="icon-menu-lateral" src={residencial} />
+          <li onClick={() => this.changeMenu('residencial')}>
+            <div className="border-active border-residencial"></div>
+            <img className="icon-menu-lateral residencial" src={residencial} />
           </li>
-          <li>
-            <div className="border-active"></div>
-            <img className="icon-menu-lateral" src={saude} />
+          <li onClick={() => this.changeMenu('saude')}>
+            <div className="border-active border-saude"></div>
+            <img className="icon-menu-lateral saude" src={saude} />
           </li>
-          <li>
-            <div className="border-active"></div>
-            <img className="icon-menu-lateral" src={auto} />
+          <li onClick={() => this.changeMenu('auto')}>
+            <div className="border-active border-auto"></div>
+            <img className="icon-menu-lateral auto" src={auto} />
           </li>
-          <li>
-            <div className="border-active"></div>
-            <img className="icon-menu-lateral" src={vida} />
+          <li onClick={() => this.changeMenu('vida')}>
+            <div className="border-active border-vida"></div>
+            <img className="icon-menu-lateral vida" src={vida} />
           </li>
         </ul>
         <div className="box-busca-audio">

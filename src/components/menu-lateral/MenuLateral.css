@@ -32,6 +32,7 @@
   width: 100%;
   height: 50px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .box-menu-lateral .border-active {

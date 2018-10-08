@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { FaChevronRight } from "react-icons/fa";
 import './Catalogo.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Catalogo extends Component {
 
@@ -10,6 +11,7 @@ class Catalogo extends Component {
   }
 
   state = {
+    intervalCicle: '',
     classic: {
       classes: 'active'
     },
@@ -23,6 +25,11 @@ class Catalogo extends Component {
     classSubtituloCatalogo: 'classic',
     classBlockSugeridos: 'classic',
     classSetaSugeridos: 'classic'
+
+  }
+
+  reset() {
+    console.log('reset');
   }
 
   constructor(){
@@ -30,8 +37,13 @@ class Catalogo extends Component {
   }
 
   componentDidMount() {
-    console.log('ooook');
+    clearInterval(this.state.intervalCicle);
+    this.setState({intervalCicle: ''});
     this.timerCicle();
+  }
+
+  componentWillUnmount() {
+    this.destroy();
   }
 
   selectCatalogo(value) {
@@ -107,7 +119,7 @@ class Catalogo extends Component {
       this.updateCicle('catalogo-'+categories[countCicle]);
       countCicle++;
     }, 9000);
-    this.setState({intervalCicle: intervalCicle})
+    this.setState({intervalCicle: intervalCicle});
   }
 
   updateCicle = (categories, action = 'default') => {
@@ -118,6 +130,12 @@ class Catalogo extends Component {
       clearInterval(intervalCicle);
       this.timerCicle();
     }
+  }
+
+  destroy = () => {
+    clearInterval(this.state.intervalCicle);
+    this.setState({intervalCicle: ''});
+    console.log('destroyed!', this.state);
   }
 
   render() {
@@ -140,27 +158,33 @@ class Catalogo extends Component {
           onClick={() => this.updateCicle('catalogo-classic', 'onMouseOver')}
           onMouseOver={() => this.updateCicle('catalogo-classic', 'onMouseOver')}
         >
-          <div className={`block-sugeridos ${classBlockSugeridos}`}></div>
-          <p>Sugeridos Classic</p>
-          <FaChevronRight className={`seta-direita ${classSetaSugeridos}`} />
+          <Link to="/classic">
+            <div className={`block-sugeridos ${classBlockSugeridos}`}></div>
+            <p>Sugeridos Classic</p>
+            <FaChevronRight className={`seta-direita ${classSetaSugeridos}`} />
+          </Link>
         </div>
         <div
           className={`box-sugeridos ${exclusive.classes}`}
           onClick={() => this.updateCicle('catalogo-exclusive', 'onMouseOver')}
           onMouseOver={() => this.updateCicle('catalogo-exclusive', 'onMouseOver')}
         >
-          <div className={`block-sugeridos ${classBlockSugeridos}`}></div>
-          <p>Sugeridos Exclusive</p>
-          <FaChevronRight className={`seta-direita ${classSetaSugeridos}`} />
+          <Link to="/exclusive">
+            <div className={`block-sugeridos ${classBlockSugeridos}`}></div>
+            <p>Sugeridos Exclusive</p>
+            <FaChevronRight className={`seta-direita ${classSetaSugeridos}`} />
+          </Link>
         </div>
         <div
           className={`box-sugeridos ${prime.classes}`}
           onClick={() => this.updateCicle('catalogo-prime', 'onMouseOver')}
           onMouseOver={() => this.updateCicle('catalogo-prime', 'onMouseOver')}
         >
-          <div className={`block-sugeridos ${classBlockSugeridos}`}></div>
-          <p>Sugeridos Prime</p>
-          <FaChevronRight className={`seta-direita ${classSetaSugeridos}`} />
+          <Link to="/prime">
+            <div className={`block-sugeridos ${classBlockSugeridos}`}></div>
+            <p>Sugeridos Prime</p>
+            <FaChevronRight className={`seta-direita ${classSetaSugeridos}`} />
+          </Link>
         </div>
       </div>
     );
